@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  --font-big-shoulders: "Big Shoulders Display", sans-serif;
+  --font-lexend: "Lexend Deca", sans-serif;
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white-p: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--very-light-gray);
+  font-size: 15px;
+  font-family: var(--font-lexend);
+}
+
+.caja {
+  background-color: var(--bright-orange);
+  display: flex;
+  min-width: none;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.tarjeta {
+  flex-direction: column;
+  padding: 50px;
+  width: 220px;
+  height: 450px;
+  display: flex;
+}
+
+.tarjeta img {
+transition: all 2.3s ease-in-out; 
+}
+
+.tarjeta img:hover {
+  cursor: pointer;
+  transform: rotateY(360deg);
+}
+
+h1 {
+  font-family: var(--font-big-shoulders);
+  font-size: 3.0rem;
+  margin-top: 25%;
+}
+p {
+  width: 90%;
+  font-size: 1rem;
+  font-weight: 100px;
+ line-height: 1.8em;
+  margin-top: 0px;
+  color: var(--transparent-white-p);
+}
+
+img {
+  width: 40%;
+}
+
+.boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  width: 60%;
+  padding: 8%;
+  border-radius: 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: var(--very-light-gray);
+  color: var(--bright-orange);
+  text-align: center;
+}
+
+.tarjeta-2 {
+  background-color: var(--dark-cyan);
+}
+
+.tarjeta-3 {
+  background-color: var(--very-dark-cyan);
+}
+
+.boton-2 {
+  color: var(--dark-cyan);
+}
+
+.boton-3 {
+  color: var(--very-dark-cyan);
+}
+
+/* ACTIONS */
+.boton-1:hover {
+  color: var(--transparent-white-p);
+  background-color: var(--bright-orange);
+  border: 4px solid var(--transparent-white-p);
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.boton-2:hover {
+  color: var(--transparent-white-p);
+  background-color: var(--dark-cyan);
+  border: 4px solid var(--transparent-white-p);
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.boton-3:hover {
+  color: var(--transparent-white-p);
+  background-color: var(--very-dark-cyan);
+  border: 4px solid var(--transparent-white-p);
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: auto;
+  }
+  .caja {
+    width: 80%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    padding: 12%;
+    width: auto;
+    height: auto;
+  }
+
+    h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .boton {
+    margin-top: 12px;
+  }
+
+  img {
+    width: 25%;
+  }
+}
